@@ -1,0 +1,11 @@
+<h1>Search Student Directory</h1>
+<form method="GET" action="/students">
+    <label for="query">Search by name:</label>
+    <input type="text" id="query" name="query">
+</form>
+
+<ul>
+  <% @students.each do |student| %>
+    <%= render partial: 'student', locals: {student: student} %>
+  <% end %>
+</ul>
